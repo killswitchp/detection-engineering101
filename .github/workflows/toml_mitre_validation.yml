@@ -1,4 +1,4 @@
-name: TOML Validation
+name: TOML and MITRE Validation
 
 on:
   workflow_dispatch:
@@ -10,6 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - run: |
+      - run: 
           python development/validation.py
           python development/mitre.py
