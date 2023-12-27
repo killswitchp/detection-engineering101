@@ -14,5 +14,6 @@ jobs:
           python-version: '3.10' 
       - run: |
           pip3 install requests
+          pip3 install tomllib
           python development/validation.py
           python development/mitre.py
