@@ -3,11 +3,12 @@ name: All Detections to Elastic
 on:
   push:
   workflow_dispatch:
-  
 
 jobs:
   toml-validation:
     runs-on: ubuntu-latest
+    env:
+     ELASTIC_KEY: ${{ secrets.ELASTIC_KEY }}
 
     steps:
       - uses: actions/checkout@v4
@@ -16,4 +17,3 @@ jobs:
           python-version: '3.12.0' 
       - run: pip3 install requests
       - run: python development/toml_to_json.py
-      
