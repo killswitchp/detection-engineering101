@@ -1,6 +1,7 @@
 name: All Detections to Elastic
 
 on:
+   
   workflow_dispatch:
 
 jobs:
